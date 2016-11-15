@@ -95,6 +95,14 @@ public class RemoteCacheManager /* implements BasicCacheContainer */{
     public Marshaller getMarshaller() {
         return marshaller;
     }
+    
+    public boolean switchToCluster(String clusterName) {
+        return jniRemoteCacheManager.switchToCluster(clusterName);
+    }
+    
+    public boolean switchToDefaultCluster() {
+        return jniRemoteCacheManager.switchToDefaultCluster();
+    }
 
     public org.infinispan.client.hotrod.jni.RemoteCacheManager getJniManager() {
         return jniRemoteCacheManager;

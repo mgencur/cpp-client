@@ -9,6 +9,7 @@ import java.util.TreeSet;
 
 import org.infinispan.client.hotrod.*;
 import org.infinispan.client.hotrod.xsite.SiteDownFailoverTest;
+import org.infinispan.client.hotrod.xsite.SiteManualSwitchTest;
 import org.testng.IMethodSelector;
 import org.testng.IMethodSelectorContext;
 import org.testng.ITestNGMethod;
@@ -37,47 +38,48 @@ public class JniTest implements IMethodSelector {
 
       testng.setTestClasses(new Class[] {
             /* package org.infinispan.client.jni.hotrod (this one) */
-            CrossLanguageHotRodTest.class,
+//            CrossLanguageHotRodTest.class,
             /* package org.infinispan.client.hotrod */
             // ApacheCommonsPoolTest.class,          // omitting
-            BulkGetKeysDistTest.class, 
-            BulkGetKeysReplTest.class, 
-            BulkGetKeysSimpleTest.class, 
-            BulkGetReplTest.class,
-            BulkGetSimpleTest.class,
+//            BulkGetKeysDistTest.class, 
+//            BulkGetKeysReplTest.class, 
+//            BulkGetKeysSimpleTest.class, 
+//            BulkGetReplTest.class,
+//            BulkGetSimpleTest.class,
             // CacheContainerTest.class,             // not relevant
-            CacheManagerNotStartedTest.class, 
-            CacheManagerStoppedTest.class, 
-            ClientAsymmetricClusterTest.class,       // HRCPP-120
+//            CacheManagerNotStartedTest.class, 
+//            CacheManagerStoppedTest.class, 
+//            ClientAsymmetricClusterTest.class,       // HRCPP-120
             // ClientConnectionPoolingTest.class,    // requires transport extraction
-            ClientSocketReadTimeoutTest.class,
+//            ClientSocketReadTimeoutTest.class,
             // omitting ConsistentHash* tests
             // CSAIntegrationTest.class,             // requires transport extraction
             // DistTopologyChangeTest.class,         // requires transport extraction
             // DroppedConnectionsTest.class,         // requires transport extraction
-            DefaultExpirationTest.class,
+//            DefaultExpirationTest.class,
             // ExpiryTest.class,                     // unstable
-            ForceReturnValuesTest.class, 
+//            ForceReturnValuesTest.class, 
             // HeavyLoadConnectionPoolingTest.class, // requires transport extraction
-            HitsAwareCacheManagersTest.class,
+//            HitsAwareCacheManagersTest.class,
             // HotRod10CSAIntegrationTest.class,     // requires transport extraction
-            HotRodAsyncReplicationTest.class,
-            HotRodIntegrationTest.class,
-            HotRodServerStartStopTest.class, 
-            HotRodStatisticsTest.class, 
+//            HotRodAsyncReplicationTest.class,
+//            HotRodIntegrationTest.class,
+//            HotRodServerStartStopTest.class, 
+//            HotRodStatisticsTest.class, 
             // PingOnStartupTest.class,              // requires transport extraction
             // RemoteAsyncAPITest.class,             // async API not implemented
-            RemoteCacheManagerTest.class,
+//            RemoteCacheManagerTest.class,
             // ReplTopologyChangeTest.class,         // requires transport extraction
             // omitting RoundRobin* tests
-            ServerErrorTest.class,
-            ServerRestartTest.class,
-            SizeTest.class,
-            SocketTimeoutErrorTest.class,
-            SegmentOwnershipLocalTest.class,
-            SegmentOwnershipDistTest.class,
-            ServerShutdownTest.class,
-            SiteDownFailoverTest.class
+//            ServerErrorTest.class,
+//            ServerRestartTest.class,
+//            SizeTest.class,
+//            SocketTimeoutErrorTest.class,
+//            SegmentOwnershipLocalTest.class,
+//            SegmentOwnershipDistTest.class,
+//            ServerShutdownTest.class,
+            SiteDownFailoverTest.class,
+            SiteManualSwitchTest.class
             // SslTest.class,                        // SSL not implemented
             // TransportObjectFactoryTest.class,     // omitting
       });
